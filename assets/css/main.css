@@ -1701,6 +1701,11 @@ select {
   margin-bottom: -0.5rem;
 }
 
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1892,6 +1897,10 @@ select {
   width: 100%;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -2011,6 +2020,10 @@ select {
   justify-content: space-between;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -2115,6 +2128,10 @@ select {
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .whitespace-nowrap {
@@ -2721,9 +2738,19 @@ select {
   background-color: rgb(177 181 209 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-primary-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 231 240 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-primary-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(3 15 107 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-primary-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 14 97 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-primary-700:hover {
@@ -3021,6 +3048,11 @@ select {
 }
 
 @media (min-width: 768px) {
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:-mt-px {
     margin-top: -1px;
   }
@@ -3051,6 +3083,10 @@ select {
 
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:w-2\/4 {
+    width: 50%;
   }
 
   .md\:w-\[500px\] {
