@@ -149,51 +149,49 @@
                                         required>
                                 </div>
                             </div>
-
                             <div class="w-full">
-                                <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
+                                <label for="kualifikasi"
+                                    class="block text-sm font-medium text-gray-700">Kualifikasi</label>
                                 <div class="mt-1">
-                                    <select id="country" name="country" autocomplete="country-name" class="js-example-basic-single w-full rounded-md border-gray-300 shadow-sm
-                                        focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" name="state">
+                                    <select id="kualifikasi" name="kualifikasi" autocomplete="kualifikasi" class="js-example-basic-single w-full rounded-md border-gray-300 shadow-sm
+                                        focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" name="kualifikasi">
                                         <option value="AL">Alabama</option>
                                         <option value="WY">Wyoming</option>
                                     </select>
                                 </div>
                             </div>
-
-                            <div class="">
-                                <label for="street-address" class="block text-sm font-medium text-gray-700">Street
-                                    address</label>
+                            <div class="w-full">
+                                <label for="sub-kualifikasi" class="block text-sm font-medium text-gray-700">Sub
+                                    Kualifikasi</label>
                                 <div class="mt-1">
-                                    <input type="text" name="street-address" id="street-address"
-                                        autocomplete="street-address"
-                                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                    <select id="sub-kualifikasi" name="sub-kualifikasi" autocomplete="sub-kualifikasi"
+                                        class="js-example-basic-single w-full rounded-md border-gray-300 shadow-sm
+                                        focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                        name="sub-kualifikasi">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
                                 </div>
                             </div>
-
-                            <div class="">
-                                <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                            <div class="w-full">
+                                <label for="jabtan-kerja" class="block text-sm font-medium text-gray-700">Jabatan
+                                    Kerja</label>
                                 <div class="mt-1">
-                                    <input type="text" name="city" id="city" autocomplete="address-level2"
-                                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                    <select id="jabtan-kerja" name="jabtan-kerja" autocomplete="jabtan-kerja" class="js-example-basic-single w-full rounded-md border-gray-300 shadow-sm
+                                        focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" name="jabtan-kerja">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
                                 </div>
                             </div>
-
-                            <div class="">
-                                <label for="region" class="block text-sm font-medium text-gray-700">State /
-                                    Province</label>
+                            <div class="w-full">
+                                <label for="jenjang" class="block text-sm font-medium text-gray-700">Jenjang</label>
                                 <div class="mt-1">
-                                    <input type="text" name="region" id="region" autocomplete="address-level1"
-                                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                                </div>
-                            </div>
-
-                            <div class="">
-                                <label for="postal-code" class="block text-sm font-medium text-gray-700">ZIP / Postal
-                                    code</label>
-                                <div class="mt-1">
-                                    <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"
-                                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                    <select id="jenjang" name="jenjang" autocomplete="jenjang" class="js-example-basic-single w-full rounded-md border-gray-300 shadow-sm
+                                        focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" name="jenjang">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -256,13 +254,58 @@
 
                 <div class="pt-5">
                     <div class="flex justify-end">
-                        <button type="button"
-                            class="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Cancel</button>
-                        <button type="submit"
-                            class="ml-3 inline-flex justify-center rounded-md border border-transparent bg-primary-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">Save</button>
+                        <a href="/index.html"><button type="button" class="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium
+                            text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2
+                            focus:ring-primary-500 focus:ring-offset-2">Batal</button></a>
+                        <button id="openModalButton" type="submit"
+                            class="ml-3 inline-flex justify-center rounded-md border border-transparent bg-primary-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">Simpan</button>
                     </div>
                 </div>
             </form>
+            <!-- Modal -->
+            <div id="myModal" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog"
+                aria-modal="true">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+                <div class="fixed inset-0 z-10 overflow-y-auto">
+                    <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                        <div
+                            class="relative transform overflow-hidden rounded-2xl bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+                            <div>
+                                <div
+                                    class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
+                                    <!-- Heroicon name: outline/check -->
+                                    <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                </div>
+                                <div class="mt-3 text-center sm:mt-5">
+                                    <h3 class="text-lg font-medium leading-6 text-primary-900" id="modal-title">
+                                        Pendaftaran
+                                        Berhasil</h3>
+                                    <div class="mt-2">
+                                        <p class="text-sm text-gray-500">Terima kasih data Anda sudah kami terima. Mohon
+                                            menunggu verifikasi selanjutnya.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+                                <a href="/pelatihan.html">
+                                    <button type="button"
+                                        class="inline-flex w-full justify-center rounded-md border border-transparent bg-primary-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 sm:col-start-2 sm:text-sm">Pendaftaran
+                                        Baru</button></a>
+                                <a href="/index.html">
+                                    <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300
+                                    bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50
+                                    focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+                                    sm:col-start-1 sm:mt-0 sm:text-sm">Selesai</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
     </main>
@@ -386,6 +429,18 @@
         $(document).ready(function () {
             $('.js-example-basic-single').select2();
         });
+    </script>
+    <!-- Modal -->
+    <script>
+        // Fungsi untuk membuka modal
+        function openModal() {
+            document.getElementById('myModal').classList.remove('hidden');
+        }
+        // Mendengarkan klik pada tombol Buka Modal
+        document.getElementById('openModalButton').addEventListener('click', openModal);
+        if (event.key === 'Escape') {
+            closeModal();
+        };
     </script>
 </body>
 
