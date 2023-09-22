@@ -17,57 +17,57 @@
 </head>
 
 <body class="relative overflow-x-hidden">
-    <main class="mt-16 sm:mt-8">
-        <nav class="fixed top-0 z-20 w-screen bg-white shadow" id="nav">
-            <div class="px-4 py-3 px-[16px] md:px-[24px] lg:px-[120px] flex justify-between items-center">
-                <!-- Brand (Logo) -->
-                <a class="items-center flex-1" href="/index.html">
-                    <img src="assets/img/logo.png" alt="Logo" class="w-auto h-10 mr-2">
-                </a>
-                <!-- Toggler untuk menu responsif -->
-                <div class="md:hidden">
-                    <button type="button" class="text-gray-600 focus:outline-none" data-target="#menu"
-                        onclick="toggleMenu()">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7">
-                            </path>
-                        </svg>
-                        <span class="hidden">toggle</span>
-                    </button>
-                </div>
-
-                <div class="hidden md:flex md:items-center md:space-x-4">
-                    <a href="index.html"
-                        class="block mt-4 active md:inline-block md:mt-0  text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Beranda</a>
-                    <a href="informasi.html"
-                        class="block mt-4 active md:inline-block md:mt-0  text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Informasi
-                        Pelatihan</a>
-                </div>
-                <div class="hidden md:flex md:items-center md:ml-3">
-                    <a href="pelatihan.html">
-                        <button type="button"
-                            class="w-full px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-600 hover:text-primary-900 bg-primary-500">
-                            Pengajuan Pelatihan
-                        </button>
-                    </a>
-                </div>
+    <nav class="fixed top-0 z-20 w-screen bg-white shadow" id="nav">
+        <div class="px-4 py-3 px-[16px] md:px-[24px] lg:px-[120px] flex justify-between items-center">
+            <!-- Brand (Logo) -->
+            <a class="items-center flex-1" href="/index.html">
+                <img src="assets/img/logo.png" alt="Logo" class="w-auto h-10 mr-2">
+            </a>
+            <!-- Toggler untuk menu responsif -->
+            <div class="md:hidden">
+                <button type="button" class="text-gray-600 focus:outline-none" data-target="#menu"
+                    onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg>
+                    <span class="hidden">toggle</span>
+                </button>
             </div>
-            <div class="hidden px-4 pb-4 space-y-2 md:hidden md:flex md:items-center" id="menu">
+
+            <div class="hidden md:flex md:items-center md:space-x-4">
                 <a href="index.html"
-                    class="block md:inline-block md:mt-0 text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Beranda</a>
+                    class="block mt-4 active md:inline-block md:mt-0  text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Beranda</a>
                 <a href="informasi.html"
-                    class="block md:inline-block md:mt-0 text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Informasi
+                    class="block mt-4 active md:inline-block md:mt-0  text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Informasi
                     Pelatihan</a>
+            </div>
+            <div class="hidden md:flex md:items-center md:ml-3">
                 <a href="pelatihan.html">
                     <button type="button"
-                        class="w-full mt-2 px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-100 hover:text-primary-900 bg-primary-500">
+                        class="w-full px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-600 hover:text-primary-900 bg-primary-500">
                         Pengajuan Pelatihan
                     </button>
                 </a>
             </div>
-        </nav>
+        </div>
+        <div class="hidden px-4 pb-4 space-y-2 md:hidden md:flex md:items-center" id="menu">
+            <a href="index.html"
+                class="block md:inline-block md:mt-0 text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Beranda</a>
+            <a href="informasi.html"
+                class="block md:inline-block md:mt-0 text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Informasi
+                Pelatihan</a>
+            <a href="pelatihan.html">
+                <button type="button"
+                    class="w-full mt-2 px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-100 hover:text-primary-900 bg-primary-500">
+                    Pengajuan Pelatihan
+                </button>
+            </a>
+        </div>
+    </nav>
+    <main class="mt-16 sm:mt-8">
         <section id="head">
             <div class="flex w-full px-[16px] md:px-[24px] lg:px-[120px] pt-12 md:pt-[86px] pb-12 flex-col justify-center
                 text-center gap-6 bg-primary-500">
