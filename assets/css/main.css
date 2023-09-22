@@ -1905,6 +1905,10 @@ select {
   width: 100vw;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -2461,6 +2465,10 @@ select {
   padding-top: 2.25rem;
 }
 
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2810,6 +2818,11 @@ select {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-primary-50:hover {
+  --tw-text-opacity: 1;
+  color: rgb(230 231 240 / var(--tw-text-opacity));
 }
 
 .hover\:file\:bg-primary-100::file-selector-button:hover {

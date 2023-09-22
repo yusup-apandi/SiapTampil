@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pelatihan</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,14 +17,13 @@
 
 </head>
 
-<body>
-    <nav class="fixed top-0 z-20 w-full bg-white shadow" id="nav">
-        <div class="px-4 py-3 md:px-[120px] py-2 flex justify-between items-center">
+<body class="relative overflow-x-hidden">
+    <nav class="fixed top-0 z-20 w-screen bg-white shadow" id="nav">
+        <div class="px-4 py-3 px-[16px] md:px-[24px] lg:px-[120px] flex justify-between items-center">
             <!-- Brand (Logo) -->
-            <a class="items-center flex-1" href="#">
+            <a class="items-center flex-1" href="/index.html">
                 <img src="assets/img/logo.png" alt="Logo" class="w-auto h-10 mr-2">
             </a>
-
             <!-- Toggler untuk menu responsif -->
             <div class="md:hidden">
                 <button type="button" class="text-gray-600 focus:outline-none" data-target="#menu"
@@ -40,63 +40,36 @@
 
             <div class="hidden md:flex md:items-center md:space-x-4">
                 <a href="index.html"
-                    class="block mt-4 active md:inline-block md:mt-0  text-primary-800 menu nav_active px-3 py-2">Beranda</a>
+                    class="block mt-4 md:inline-block md:mt-0  text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Beranda</a>
                 <a href="informasi.html"
-                    class="block mt-4 md:inline-block md:mt-0 text-primary-800 menu px-3 py-2">Informasi
+                    class="block mt-4 md:inline-block md:mt-0  text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Informasi
                     Pelatihan</a>
             </div>
             <div class="hidden md:flex md:items-center md:ml-3">
                 <a href="pelatihan.html">
                     <button type="button"
-                        class="w-full px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-100 hover:text-primary-900 bg-primary-500">
+                        class="w-full px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-700 bg-primary-500">
                         Pengajuan Pelatihan
                     </button>
                 </a>
             </div>
         </div>
-        <div class="hidden px-4 pb-4 space-y-4 md:hidden md:flex md:items-center" id="menu">
+        <div class="hidden px-4 pb-4 space-y-2 md:hidden md:flex md:items-center" id="menu">
             <a href="index.html"
-                class="block mt-4 md:inline-block md:mt-0 text-primary-800 menu nav_active px-3 py-2">Beranda</a>
+                class="block md:inline-block md:mt-0 text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Beranda</a>
             <a href="informasi.html"
-                class="block mt-4 md:inline-block md:mt-0 text-primary-800 menu px-3 py-2">Informasi Pelatihan</a>
+                class="block md:inline-block md:mt-0 text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Informasi
+                Pelatihan</a>
             <a href="pelatihan.html">
                 <button type="button"
-                    class="w-full px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-100 hover:text-primary-900 bg-primary-500">
+                    class="w-full mt-2 px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-700 bg-primary-500">
                     Pengajuan Pelatihan
                 </button>
             </a>
         </div>
     </nav>
-    <div class="fixed bottom-0 right-0 z-20 flex flex-col items-end justify-end w-full p-4 space-y-4 md:w-[500px]">
-        <div id="popup"
-            class="hidden flex flex-col bg-white rounded-2xl p-4 shadow-[1px_1px_8px_0_rgba(180,180,180,0.39)] w-full space-y-2">
-            <div class="flex justify-between space-x-4">
-                <h1 class="flex-1 text-xl font-semibold text-primary-800">Ayo Daftar Jadi Relawan</h1>
-                <button onclick="toggleModal()" type="button" class="text-gray-600 focus:outline-none">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                            d="M10.0302 8.97C9.88798 8.83752 9.69993 8.7654 9.50563 8.76883C9.31133 8.77225 9.12595 8.85097 8.98853 8.98838C8.85112 9.12579 8.77241 9.31118 8.76898 9.50548C8.76555 9.69978 8.83767 9.88783 8.97015 10.03L10.9402 12L8.97015 13.97C8.89647 14.0387 8.83736 14.1215 8.79637 14.2135C8.75538 14.3055 8.73334 14.4048 8.73156 14.5055C8.72979 14.6062 8.74831 14.7062 8.78603 14.7996C8.82375 14.893 8.8799 14.9778 8.95112 15.049C9.02233 15.1203 9.10717 15.1764 9.20056 15.2141C9.29394 15.2518 9.39397 15.2704 9.49468 15.2686C9.59538 15.2668 9.69469 15.2448 9.78669 15.2038C9.87869 15.1628 9.96149 15.1037 10.0302 15.03L12.0002 13.06L13.9702 15.03C14.1123 15.1625 14.3004 15.2346 14.4947 15.2312C14.689 15.2277 14.8744 15.149 15.0118 15.0116C15.1492 14.8742 15.2279 14.6888 15.2313 14.4945C15.2348 14.3002 15.1626 14.1122 15.0302 13.97L13.0602 12L15.0302 10.03C15.1038 9.96134 15.1629 9.87854 15.2039 9.78654C15.2449 9.69454 15.267 9.59523 15.2687 9.49452C15.2705 9.39382 15.252 9.29379 15.2143 9.2004C15.1766 9.10702 15.1204 9.02218 15.0492 8.95096C14.978 8.87974 14.8931 8.8236 14.7998 8.78588C14.7064 8.74816 14.6063 8.72963 14.5056 8.73141C14.4049 8.73319 14.3056 8.75523 14.2136 8.79622C14.1216 8.83721 14.0388 8.89631 13.9702 8.97L12.0002 10.94L10.0302 8.97Z"
-                            fill="#151617" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M12 1.25C6.063 1.25 1.25 6.063 1.25 12C1.25 17.937 6.063 22.75 12 22.75C17.937 22.75 22.75 17.937 22.75 12C22.75 6.063 17.937 1.25 12 1.25ZM2.75 12C2.75 9.54675 3.72455 7.19397 5.45926 5.45926C7.19397 3.72455 9.54675 2.75 12 2.75C14.4533 2.75 16.806 3.72455 18.5407 5.45926C20.2754 7.19397 21.25 9.54675 21.25 12C21.25 14.4533 20.2754 16.806 18.5407 18.5407C16.806 20.2754 14.4533 21.25 12 21.25C9.54675 21.25 7.19397 20.2754 5.45926 18.5407C3.72455 16.806 2.75 14.4533 2.75 12Z"
-                            fill="#151617" />
-                    </svg>
-                    <span class="hidden">toggle</span>
-                </button>
-            </div>
-            <p class="text-base text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                necessitatibus incidunt ut officiis explicabo inventore.</p>
-            <a href="register.html">
-                <button type="button"
-                    class="w-full px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-100 hover:text-primary-900 bg-primary-500">
-                    Daftar Sekarang
-                </button>
-            </a>
-
-        </div>
-    </div>
-    <main class="px-[16px] sm:px-[120px] pt-6 sm:pt-[120px] pb-2 sm:pb-6 ">
-        <section id="form" class="xl:px-[240px]">
+    <main class="mt-16 sm:mt-8">
+        <section id="form" class="px-[16px] md:px-[24px] lg:px-[120px] pt-4 md:pt-[86px] pb-6">
             <div class="flex flex-col space-y-2">
                 <h3 class="text-3xl font-semibold text-primary-900">Form Pendaftaran Pengajuan Sertifikasi Tenaga
                     Terampil</h3>
@@ -309,83 +282,73 @@
         </section>
 
     </main>
-    <footer class="bg-primary-500 px-[16px] sm:px-[120px]" aria-labelledby="footer-heading">
-        <h2 id="footer-heading" class="sr-only">Footer</h2>
-        <div class="mx-auto px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                <div class="space-y-8">
-                    <img class="h-7" src="assets/img/logo.png" alt="SIAP TAMPIL">
+    <footer class="bg-primary-500 px-[16px] md:px-[24px] lg:px-[120px]" aria-labelledby="footer-heading">
+        <div class="mx-auto pb-8 pt-16 ">
+            <div class="flex flex-col lg:flex-row justify-between gap-4">
+                <div class="flex flex-col gap-2 w-full lg:w-1/3">
+                    <img class="h-7 w-fit" src="assets/img/logo.png" alt="SIAP TAMPIL">
                     <p class="text-sm text-gray-200">SIAP TAMPIL (Sistem Informasi Pelayanan Tenaga
                         Terampil Konstruksi) dikelola
                         oleh Bidang Bina Konstruksi Dinas Pekerjaan Umum dan Tata Ruang Kab. Sumedang.</p>
                 </div>
-                <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0">
-                    <div class="md:grid md:gap-8">
-                        <div class="mt-6 space-y-4">
-                            <h3 class="text-xl font-semibold leading-6 text-white">Alamat</h3>
-                            <p class="text-sm text-gray-200">Jl. R.A. Kartini No.13, Regol Wetan, Kec.
-                                Sumedang Sel., Kabupaten Sumedang, Jawa Barat 45311</p>
-                        </div>
-                    </div>
-                    <div class="md:grid md:gap-8">
-                        <div class="mt-6 space-y-4">
-                            <h3 class="text-xl font-semibold leading-6 text-white">Hubungi Kami</h3>
-                            <a href="mailto:binakonstruksisumedang@gmail.com"
-                                class="flex flex-row text-gray-400 space-x-2 hover:text-gray-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                    <style>
-                                        svg {
-                                            fill: #ffffff
-                                        }
-                                    </style>
-                                    <path
-                                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-                                </svg>
-                                <span class="text-sm text-white">binakonstruksisumedang@gmail.com</span>
-                            </a>
-                            <a href="tel:(0261)201240"
-                                class="flex flex-row space-x-2 text-gray-400 hover:text-gray-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                    <style>
-                                        svg {
-                                            fill: #ffffff
-                                        }
-                                    </style>
-                                    <path
-                                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
-                                </svg>
-                                <span class="text-sm text-white">(0261)201240</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="md:grid md:gap-8">
-                        <div>
-                            <h3 class="text-xl font-semibold leading-6 text-white">Link Terkait</h3>
-                            <ul role="list" class="mt-6 space-y-2">
-                                <li>
-                                    <a href="https://dpupr.sumedangkab.go.id/" target="_blank"
-                                        class="text-sm text-gray-200 hover:text-white">Web
-                                        Dinas PUTR
-                                        Kabupaten Sumedang</a>
-                                </li>
-
-                                <li>
-                                    <a href="https://sumedangkab.go.id/" target="_blank"
-                                        class="text-sm text-gray-200 hover:text-white">Website
-                                        Pemerintah Kab. Sumedang</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="flex flex-col gap-2 flex-1 m-0">
+                    <h3 class="text-xl font-semibold leading-6 text-white">Alamat</h3>
+                    <p class="text-sm text-gray-200">Jl. R.A. Kartini No.13, Regol Wetan, Kec.
+                        Sumedang Sel., Kabupaten Sumedang, Jawa Barat 45311</p>
+                </div>
+                <div class="flex flex-col gap-2 flex-1">
+                    <h3 class="text-xl font-semibold leading-6 text-white">Hubungi Kami</h3>
+                    <a href="mailto:binakonstruksisumedang@gmail.com"
+                        class="flex flex-row text-gray-400 space-x-2 hover:text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>
+                                svg {
+                                    fill: #ffffff
+                                }
+                            </style>
+                            <path
+                                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                        </svg>
+                        <span class="text-sm text-white">binakonstruksisumedang@gmail.com</span>
+                    </a>
+                    <a href="tel:(0261)201240" class="flex flex-row space-x-2 text-gray-400 hover:text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>
+                                svg {
+                                    fill: #ffffff
+                                }
+                            </style>
+                            <path
+                                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                        </svg>
+                        <span class="text-sm text-white">(0261)201240</span>
+                    </a>
+                </div>
+                <div class="flex flex-col gap-2 flex-1">
+                    <h3 class="text-xl font-semibold leading-6 text-white">Link Terkait</h3>
+                    <ul role="list" class="space-y-1">
+                        <li>
+                            <a href="https://dpupr.sumedangkab.go.id/" target="_blank"
+                                class="text-sm text-gray-200 hover:text-white">Web
+                                Dinas PUTR
+                                Kabupaten Sumedang</a>
+                        </li>
+                        <li>
+                            <a href="https://sumedangkab.go.id/" target="_blank"
+                                class="text-sm text-gray-200 hover:text-white">Website
+                                Pemerintah Kab. Sumedang</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="my-8 border-t border-gray-200/10 pt-8 sm:mt-20 lg:mt-24">
-                <p class="text-sm leading-5 text-gray-300 text-center">&copy; 2023 SIAP TAMPIL (Sistem Informasi
-                    Pelayanan Tenaga
-                    Terampil Konstruksi). All rights reserved.</p>
-            </div>
+        </div>
+        <div class="border-t border-gray-200/10 py-4 mt-4">
+            <p class="text-sm leading-5 text-gray-300 text-center">&copy; 2023 SIAP TAMPIL (Sistem Informasi
+                Pelayanan Tenaga
+                Terampil Konstruksi). All rights reserved.</p>
+        </div>
         </div>
     </footer>
     <script>
