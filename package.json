@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": " npx --node-arg=--max-old-space-size=8192 tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch"
+    "build": " npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3"
