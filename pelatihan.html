@@ -19,53 +19,73 @@
 
 <body class="relative overflow-x-hidden">
     <nav class="fixed top-0 z-20 w-screen bg-white shadow" id="nav">
-        <div class="px-4 py-3 px-[16px] md:px-[24px] lg:px-[120px] flex justify-between items-center">
+        <div class="px-4 py-3 md:px-[24px] lg:px-[120px] flex justify-between items-center">
             <!-- Brand (Logo) -->
-            <a class="items-center flex-1" href="/index.html">
+            <a class="items-center" href="/admin.html">
                 <img src="assets/img/logo.png" alt="Logo" class="w-auto h-10 mr-2">
             </a>
-            <!-- Toggler untuk menu responsif -->
-            <div class="md:hidden">
-                <button type="button" class="text-gray-600 focus:outline-none" data-target="#menu"
-                    onclick="toggleMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7">
-                        </path>
+            <div>
+                <button type="button" class="flex rounded-full bg-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500
+                    focus:ring-offset-2" id="dropdownButton" aria-expanded="false" aria-haspopup="true">
+                    <span class="sr-only">Open user menu</span>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-primary-300">
+                        <path fill-rule="evenodd"
+                            d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                            clip-rule="evenodd" />
                     </svg>
-                    <span class="hidden">toggle</span>
-                </button>
-            </div>
 
-            <div class="hidden md:flex md:items-center md:space-x-4">
-                <a href="index.html"
-                    class="block mt-4 md:inline-block md:mt-0  text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Beranda</a>
-                <a href="informasi.html"
-                    class="block mt-4 md:inline-block md:mt-0  text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Informasi
-                    Pelatihan</a>
-            </div>
-            <div class="hidden md:flex md:items-center md:ml-3">
-                <a href="pelatihan.html">
-                    <button type="button"
-                        class="w-full px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-700 bg-primary-500">
-                        Pengajuan Pelatihan
-                    </button>
-                </a>
-            </div>
-        </div>
-        <div class="hidden px-4 pb-4 space-y-2 md:hidden md:flex md:items-center" id="menu">
-            <a href="index.html"
-                class="block md:inline-block md:mt-0 text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Beranda</a>
-            <a href="informasi.html"
-                class="block md:inline-block md:mt-0 text-primary-800 menu hover:bg-primary-50 rounded-lg px-3 py-2">Informasi
-                Pelatihan</a>
-            <a href="pelatihan.html">
-                <button type="button"
-                    class="w-full mt-2 px-4 py-2 text-sm font-bold text-center text-white rounded-lg hover:bg-primary-700 bg-primary-500">
-                    Pengajuan Pelatihan
                 </button>
-            </a>
+                <!-- Konten dropdown -->
+                <div id="dropdownContent"
+                    class="hidden absolute right-2 mr-4 mt-2 py-1 w-36 bg-white rounded-xl shadow-lg">
+                    <div class="flex flex-col px-3 py-1 bg-gray-50 mb-2 ">
+                        <h3 class="text-base text-primary-500 font-medium">CV Asep</h3>
+                        <span class="text-sm text-gray-500">Administrator</span>
+                    </div>
+                    <button id="openModalButton" type="button"
+                        class="block px-4 py-2 bg-white text-red-800 hover:text-red-600">Keluar</button>
+                </div>
+                <!-- Modal Keluar-->
+                <div id="myModal" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog"
+                    aria-modal="true">
+                    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+                    <div class="fixed inset-0 z-10 overflow-y-auto">
+                        <div class="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+                            <div
+                                class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+                                <div>
+                                    <div
+                                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
+                                        <!-- Heroicon name: outline/check -->
+                                        <svg class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                                        </svg>
+                                    </div>
+                                    <div class="mt-3 text-center sm:mt-5">
+                                        <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Keluar
+                                            Akun?</h3>
+                                        <div class="mt-2">
+                                            <p class="text-sm text-gray-500">Apakah kamu yakin ingin keluar akun?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+                                    <button type="button"
+                                        class=" inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:col-start-2 sm:text-sm">Keluar</button>
+                                    <button id="closeModalButton" type="button"
+                                        class="modal-close mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 sm:col-start-1 sm:mt-0 sm:text-sm">Batal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </nav>
     <main class="mt-16 sm:mt-8">
@@ -227,7 +247,7 @@
 
                 <div class="pt-5">
                     <div class="flex justify-end">
-                        <a href="/index.html"><button type="button" class="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium
+                        <a href="/admin.html"><button type="button" class="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium
                             text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2
                             focus:ring-primary-500 focus:ring-offset-2">Batal</button></a>
                         <button id="openModalButton" type="submit"
@@ -404,6 +424,31 @@
         if (event.key === 'Escape') {
             closeModal();
         };
+    </script>
+    <!-- Modal Logout-->
+    <script>
+        // Fungsi untuk membuka modal
+        function openModal() {
+            document.getElementById('myModal').classList.remove('hidden');
+        }
+
+        // Fungsi untuk menutup modal
+        function closeModal() {
+            document.getElementById('myModal').classList.add('hidden');
+        }
+
+        // Mendengarkan klik pada tombol Buka Modal
+        document.getElementById('openModalButton').addEventListener('click', openModal);
+
+        // Mendengarkan klik pada tombol Tutup Modal
+        document.getElementById('closeModalButton').addEventListener('click', closeModal);
+
+        // Mendengarkan ketika tombol Escape (Esc) ditekan
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
     </script>
 </body>
 
